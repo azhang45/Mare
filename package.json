@@ -1,0 +1,19 @@
+{
+  "name": "mare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azhang45/Mare.git"
+  },
+  "author": "azhang45",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azhang45/Mare/issues"
+  },
+  "homepage": "https://github.com/azhang45/Mare#readme"
+}
