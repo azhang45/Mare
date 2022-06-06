@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <head></head>
     <body>
         <form action="/upload" method="POST" enctype="multipart/form-data">
             <!-- The file upload input -->
@@ -7,5 +8,9 @@
             <!-- The submit button -->
             <button type="submit" id="submit">Submit</button>
         </form>
+        {{#if imgPath}}
+        <img src="{{imgPath}}">
+        {{/if}}
+        <p style="color:red">{{msg}}</p>
     </body>
 </html>
