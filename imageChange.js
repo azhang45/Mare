@@ -1,4 +1,4 @@
-const img = document.getElementById('eeveelutions');
+const img = document.getElementById('');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
