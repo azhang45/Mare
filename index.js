@@ -51,7 +51,6 @@ function checkFileType(file, cb) {
     return cb(null, true);
   } else {
     cb("Error: Images Only!");
-
   }
 }
 
