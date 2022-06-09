@@ -7,10 +7,12 @@ const multer = require("multer")
 const fs = require('fs');
 const path = require("path")
 const app = express()
+const {spawn} = require('child_process');
 
 const fileSizeLimit = 10000000; // The limit on the file's size in bytes
 const fileLifeTime = 1000 * 60 * 60; // The time until the file is deleted from the server in milliseconds
 const uploadsPath = './public/uploads/';
+
 
 app.use(express.static(__dirname + "/public"));
 app.set("views", path.join(__dirname, "views"));
@@ -39,6 +41,7 @@ const upload = multer({
 }).single('img');
 
 var fileName;
+var localFileName;
 var mareFileName;
 
 // Only allow image files
@@ -74,6 +77,8 @@ app.get("/", (req, res) => {
 //   }
 // })
 
+var prev = undefined
+
 app.post('/upload', (req, res) => {
   upload(req, res, (err) => {
 
@@ -85,6 +90,7 @@ app.post('/upload', (req, res) => {
     }
     else {
       // If the user didn't upload a file and hasn't uploaded one in the past
+      console.log(fileName)
       if (fileName == undefined && req.file == undefined) {
         res.render('home', {
           msg: "Error: Upload a file first!"
@@ -94,7 +100,7 @@ app.post('/upload', (req, res) => {
       else {
         if (req.file != undefined) {
           fileName = `public/uploads/${req.file.filename}`;
-          var localFileName = `uploads/${req.file.filename}`;
+          localFileName = `uploads/${req.file.filename}`;
           mareFileName = `public/uploads/mare_${req.file.filename}`;
 
           // Delete the files after one hour
@@ -113,8 +119,21 @@ app.post('/upload', (req, res) => {
             });
           }, fileLifeTime);
         }
+        else if(req.file == undefined){
+          localFileName = prev;
+        }
+
           //manipulateImage(fileName);
+
+        const python = spawn('python', ['convert.py', fileName]);
+        python.stdout.on('data',(data) => {
+          console.log(data);
+        });
+
+        prev = localFileName;
+
         res.render('home', {imgPath: localFileName})
+        console.log(localFileName)
       }
 
 
