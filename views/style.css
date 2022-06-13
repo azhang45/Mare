@@ -1,4 +1,4 @@
-.button-35 {
+button {
   align-items: center;
   background-color: #fff;
   border-radius: 12px;
@@ -26,6 +26,6 @@
   touch-action: manipulation;
 }
 
-.button-35:hover {
+button:hover {
   box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
