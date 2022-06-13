@@ -6,14 +6,16 @@
 </head>
 
 <body>
+<!-- HTML !-->
+<button class="button-35" role="button">Button 35</button>
 
 </div>
     <form action="/upload" method="POST" enctype="multipart/form-data">
         <!-- The file upload input -->
         <input type="file" name="img" class="upload-img" />
         <!-- The submit button -->
-        <button type="submit" id="submit">Submit</button>
-        <button type="convert" id="convert">Convert</button>
+        <button class="button-35" type="submit" id="submit">Submit</button>
+        <button class="button-35" type="convert" id="convert">Convert</button>
     </form>
     {{#if imgPath}}
     <img style="max-width: 50%" src="{{imgPath}}">
