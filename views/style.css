@@ -36,9 +36,9 @@ h1 {
     font-family: 'Pacifico', cursive;
     text-transform: uppercase;
     font-size: $extra-large;
-    color: lighten($pink, 25%);
+    color: lighten($red, 25%);
     -webkit-text-stroke-width: $stroke-width;
-    -webkit-text-stroke-color: lighten($pink, 5%);
+    -webkit-text-stroke-color: lighten($red, 5%);
     @include center;
     text-shadow: 0 0 40px lighten($pink, 5%),
                  0 0 40px lighten($pink, 5%),
@@ -49,7 +49,7 @@ h1 {
       position: absolute;
       color: transparent;
       -webkit-text-stroke-width: $stroke-width;
-      -webkit-text-stroke-color: darken($pink, 40%);
+      -webkit-text-stroke-color: darken($red, 40%);
       top: -5%;
       left: -0.5%;
       
