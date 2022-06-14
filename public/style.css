@@ -1,7 +1,6 @@
 body {
   background-color: rgba(59, 82, 146, 0.813);
   align-content: center;
-  margin:auto;
 }
 
 button {
@@ -72,7 +71,6 @@ box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
 
 .content{
-  max-width: 1280px;
   margin: auto; 
 }
 
