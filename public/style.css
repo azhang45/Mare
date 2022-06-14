@@ -98,6 +98,11 @@ header .overlay{
 	
 }
 
+.coloringbook{
+	font-size: 24px;
+	color:rgb(8, 0, 34);
+}
+
 h1 {
 	font-family: 'Dancing Script', cursive;
 	font-size: 80px;
