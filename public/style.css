@@ -109,3 +109,7 @@ h3, p {
 	font-size: 28px;
 	margin-bottom: 30px;
 }
+
+input[type='file']{
+	font-size: 12px;
+}
