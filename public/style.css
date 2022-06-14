@@ -1,6 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 220%;
+  position: relative;
+  min-height: 220%;
+}
+
 body {
   background-color: rgba(59, 82, 146, 0.813);
   align-content: center;
+  
 }
 
 button {
@@ -118,4 +131,31 @@ h3, p {
 input[type='file']{
 	font-size: 24px;
 	color:rgb(8, 0, 34);
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content p{
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-transform:lowercase;
+  line-height: 3rem;
 }
