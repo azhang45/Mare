@@ -1,6 +1,7 @@
 body {
   background-color: rgba(59, 82, 146, 0.813);
   align-content: center;
+  margin:auto;
 }
 
 button {
@@ -111,6 +112,6 @@ h3, p {
 }
 
 input[type='file']{
-	font-size: 574px;
+	font-size: 24px;
 	color:rgb(8, 0, 34);
 }
