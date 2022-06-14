@@ -90,7 +90,7 @@ app.post('/upload', (req, res) => {
     }
     else {
       // If the user didn't upload a file and hasn't uploaded one in the past
-      console.log(fileName)
+      
       if (fileName == undefined && req.file == undefined) {
         res.render('home', {
           msg: "Error: Upload a file first!"
@@ -133,7 +133,6 @@ app.post('/upload', (req, res) => {
         prev = localFileName;
 
         res.render('home', {imgPath: localFileName})
-        console.log(localFileName)
       }
 
 
